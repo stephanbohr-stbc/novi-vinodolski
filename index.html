@@ -40,7 +40,7 @@
     color: var(--terrakotta); font-weight: 600; margin-bottom: 14px; display: block;
   }
 
-  /* Entwurfs-Markierungen: nur sichtbar, solange <body class="entwurf"> gesetzt ist */
+  /* Entwurfs-Markierungen: nur sichtbar, solange <body> gesetzt ist */
   .pruefen { display: none; }
   body.entwurf .pruefen {
     display: block; font-style: normal; font-size: .8rem; line-height: 1.4; font-family: var(--sans);
@@ -165,6 +165,7 @@
   .ausflug.gespiegelt .text { order: -1; }
   .ausflug .bilder { display: grid; grid-template-columns: 3fr 2fr; gap: 12px; height: 380px; }
   .ausflug .bilder figure { border-radius: 6px; overflow: hidden; min-height: 0; }
+  .ausflug .bilder.einzeln { grid-template-columns: 1fr; height: auto; aspect-ratio: 4 / 3; }
   .ausflug h3 { font-size: 1.5rem; }
   .ortszeile { margin-top: 56px; border-top: 2px solid var(--terrakotta); padding-top: 18px; max-width: 46em; }
   .ortszeile p { color: var(--tinte-leise); margin: 0; }
@@ -272,6 +273,7 @@
     .gruende, .karten, .saisons, .schritte, .plitvice, .zweier, .ausflug, .zeitleiste { grid-template-columns: 1fr; }
     .ausflug.gespiegelt .text { order: 0; }
     .ausflug .bilder { height: 260px; }
+    .ausflug .bilder.einzeln { height: auto; }
     .fotos { grid-template-columns: 1fr; }
     .fotos .f-breit, .fotos .f-schmal, .fotos .f-drittel { grid-column: auto; aspect-ratio: 4 / 3; height: auto; }
     .galerie { grid-template-columns: 1fr; }
@@ -417,14 +419,13 @@
     </div>
 
     <div class="ausflug gespiegelt">
-      <div class="bilder">
-        <figure><img src="bilder/umgebung/krk-baska-bucht.jpg" alt="Strand von Baška, Insel Krk / Baška beach, Krk island"></figure>
-        <figure><img src="bilder/umgebung/krk-vrbnik.jpg" alt="Altstadtgasse auf Krk / Old town lane on Krk"></figure>
+      <div class="bilder einzeln">
+        <figure><img src="bilder/privat/krk-baska.jpg" alt="Manu in Baška, Insel Krk / Manu in Baška, Krk island"></figure>
       </div>
       <div class="text">
         <h3 data-en="The island of Krk, right across the bay">Die Insel Krk, direkt gegenüber</h3>
         <p data-en="From Novi Vinodolski you look straight across to Krk, and the island is beautiful: lots of hills with great views, gorgeous beaches and two lovely little old towns. In the south lies Baška with its fantastic, almost two-kilometre-long beach.">Von Novi Vinodolski schaut man direkt hinüber nach Krk, und die Insel ist landschaftlich wunderschön: viele Hügel mit tollen Aussichten, superschöne Strände und zwei schöne Altstädtchen. Im Süden liegt Baška mit seinem fantastischen, fast zwei Kilometer langen Strand.</p>
-        <p data-en="We have just been there again – and are already planning the next trip.">Wir waren gerade erst wieder dort – und planen schon den nächsten Ausflug.</p>
+        <p data-en="We have just been there again – the photo was taken on the promenade in Baška.">Wir waren gerade erst wieder dort – das Foto ist an der Promenade in Baška entstanden.</p>
         <ul class="links">
           <li><a href="https://krk.hr/de/" target="_blank" rel="noopener" data-en="Krk island tourist information">Tourist-Information Insel Krk</a></li>
           <li><a href="https://www.visitbaska.hr/de" target="_blank" rel="noopener" data-en="Baška tourist information">Tourist-Information Baška</a></li>
@@ -465,7 +466,7 @@
       <figure class="f-drittel"><img src="bilder/privat/adults-pool.jpg" alt=""><figcaption><b data-en="Adults-only pool">Adults-only-Pool</b><span data-en="Right by the hotel, wonderfully quiet.">Direkt am Hotel, herrlich ruhig.</span></figcaption></figure>
       <figure class="f-drittel"><img src="bilder/privat/pool-hotel.jpg" alt=""><figcaption><b data-en="Pool with a view of the hotel">Pool mit Blick aufs Hotel</b><span data-en="Loungers right by the water.">Liegen direkt am Wasser.</span></figcaption></figure>
       <figure class="f-drittel"><img src="bilder/privat/fruehstueck.jpg" alt=""><figcaption><b data-en="Breakfast at the hotel">Frühstück im Hotel</b><span data-en="Outside, with a view of the bay.">Draußen, mit Blick auf die Bucht.</span></figcaption></figure>
-      <figure class="f-schmal"><img src="bilder/privat/kinderparadies.jpg" alt="" style="object-position: 50% 30%"><figcaption><b data-en="A paradise for children">Ein Kinderparadies</b><span data-en="Everything here is wonderfully child-friendly – Gully the seagull welcomes the little ones.">Hier ist alles super kinderfreundlich – Möwe Gully begrüßt die Kleinen.</span></figcaption></figure>
+      <figure class="f-schmal"><img src="bilder/privat/kinderparadies.jpg" alt="" style="object-position: 50% 30%"><figcaption><b data-en="A paradise for children">Ein Kinderparadies</b><span data-en="Everything here is wonderfully child-friendly. Those of you thinking of your grandchildren are certainly in good hands here.">Hier ist alles super kinderfreundlich. Wer von euch an seine Enkel denkt, ist hier sicher gut aufgestellt.</span></figcaption></figure>
       <figure class="f-breit"><img src="bilder/privat/familienpool.jpg" alt=""><figcaption><b data-en="The big family pool">Der große Familienpool</b><span data-en="Especially for families, in addition to the adults&#39; pool – with bars built into the water.">Extra für Familien, zusätzlich zum Erwachsenen-Pool – mit Bars, die in den Pool eingebaut sind.</span></figcaption></figure>
       <figure class="f-schmal"><img src="bilder/privat/wir-golden-hour.jpg" alt=""><figcaption><b data-en="Golden hour">Golden Hour</b><span data-en="The two of us in the evening light.">Wir beide im Abendlicht.</span></figcaption></figure>
       <figure class="f-breit"><img src="bilder/privat/sonnenuntergang-meer.jpg" alt=""><figcaption><b data-en="Sunset over the bay">Sonnenuntergang über der Bucht</b><span data-en="A different picture every evening.">Jeden Abend ein anderes Bild.</span></figcaption></figure>
@@ -631,7 +632,7 @@
   <div class="wrap">
     <p data-en="This is a private page by Manu and Stephan for friends and acquaintances. It is neither an offer nor investment advice. Only the documents and contracts of the developer, NV ADRIA CONDOS d.o.o., are binding. Property investments involve risks; value growth and rental income are not guaranteed.">Dies ist eine private Seite von Manu und Stephan für Freunde und Bekannte. Sie ist kein Angebot und keine Anlageberatung. Verbindlich sind allein die Unterlagen und Verträge des Entwicklers NV ADRIA CONDOS d.o.o. Immobilieninvestitionen sind mit Risiken verbunden; Wertentwicklung und Mieterträge sind nicht garantiert.</p>
     <p data-en="The Mövenpick Hotel &amp; Residences Kvarner Bay project is not owned, developed or sold by Accor. The developer uses the brands under a licence.">Das Projekt Mövenpick Hotel &amp; Residences Kvarner Bay befindet sich nicht im Eigentum von Accor und wird nicht von Accor entwickelt oder verkauft. Der Entwickler nutzt die Marken auf Grundlage einer Lizenz.</p>
-    <p class="bildnachweis"><span data-en="Photo credits (Wikimedia Commons):">Bildnachweis (Wikimedia Commons):</span> Baška – Andorado, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a> · Vrbnik – Isiwal, <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC BY-SA 3.0</a> · Motovun – Jernej Furman, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <span data-en="Truffle pasta">Trüffelpasta</span> – heatheronhertravels, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>. <span data-en="All other photos: our own or the developer's visualisations.">Alle übrigen Fotos: eigene Aufnahmen oder Visualisierungen des Entwicklers.</span></p>
+    <p class="bildnachweis"><span data-en="Photo credits (Wikimedia Commons):">Bildnachweis (Wikimedia Commons):</span> Motovun – Jernej Furman, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <span data-en="Truffle pasta">Trüffelpasta</span> – heatheronhertravels, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a>. <span data-en="All other photos: our own or the developer's visualisations.">Alle übrigen Fotos: eigene Aufnahmen oder Visualisierungen des Entwicklers.</span></p>
   </div>
 </footer>
 
