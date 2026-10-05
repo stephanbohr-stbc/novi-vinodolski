@@ -1,6 +1,8 @@
 # Änderungsprotokoll
 
 ## 2026-10-05
+- Datenmodell für Empfehlungsseiten (Issue #3, Punkt 1): `docs/datenmodell.md`, JSON Schema und Novi-Beispiel unter `docs/schema/`.
+- Konzept Kontaktverwaltung (Issue #2) in `docs/konzept-kontaktverwaltung.md`, abgestimmt auf #3, #4, #5.
 - Projektdokumentation (README, `docs/PROZESS.md`, dieses Protokoll) ergänzt.
 - Ideen als Issues erfasst: weitere Sprachen, Kontaktverwaltung, Selbstbedienungs-Formular, Laufzeitbegrenzung, Konditionen für Dritte.
 

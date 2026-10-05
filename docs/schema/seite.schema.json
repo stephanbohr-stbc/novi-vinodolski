@@ -1,0 +1,329 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://stephanbohr-stbc.github.io/novi-vinodolski/docs/schema/seite.schema.json",
+  "title": "Empfehlungsseite",
+  "description": "Datenmodell einer Freunde-Empfehlungsseite. Aus diesen Daten wird eine index.html nach der Novi-Vinodolski-Vorlage erzeugt. Alle sichtbaren Texte sind mehrsprachig (Objekt mit Sprachcode als Schlüssel).",
+  "type": "object",
+  "required": ["meta", "gastgeber", "objekt", "hero", "brief", "gruende", "fotos", "kontakt", "fuss"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["slug", "sprachen", "standardsprache", "erstellt_am", "status"],
+      "additionalProperties": false,
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9-]{3,40}$", "description": "Kennung der Seite, wird Teil der URL (z. B. novi-vinodolski)." },
+        "sprachen": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/sprachcode" }, "description": "Angebotene Sprachen in Reihenfolge des Umschalters." },
+        "standardsprache": { "$ref": "#/$defs/sprachcode" },
+        "erstellt_am": { "type": "string", "format": "date" },
+        "stand": { "type": "string", "format": "date", "description": "Datum, auf das sich Fotos und Projektstand beziehen (‚Stand 1. Oktober 2026')." },
+        "status": { "type": "string", "enum": ["entwurf", "veroeffentlicht", "abgelaufen", "abgeschaltet"] },
+        "gueltig_bis": { "type": "string", "format": "date", "description": "Laufzeitende (Issue #4). Danach zeigt die Seite nur noch den Ablauf-Hinweis." },
+        "ablauf_hinweis": { "$ref": "#/$defs/text", "description": "Text, der nach Ablauf angezeigt wird." },
+        "suchmaschinen": { "type": "boolean", "default": false, "description": "false = noindex." }
+      }
+    },
+    "gastgeber": {
+      "type": "object",
+      "required": ["anzeigename", "anrede", "kontakt"],
+      "additionalProperties": false,
+      "properties": {
+        "anzeigename": { "type": "string", "description": "So, wie die Gastgeber auf der Seite heißen, z. B. ‚Manu & Stephan'." },
+        "personen": { "type": "array", "items": { "type": "object", "required": ["vorname"], "properties": { "vorname": { "type": "string" }, "nachname": { "type": "string" } } } },
+        "anrede": { "type": "string", "enum": ["du", "ihr", "sie"], "description": "Wie die Besucher angesprochen werden." },
+        "kontakt": {
+          "type": "object",
+          "required": ["email"],
+          "additionalProperties": false,
+          "properties": {
+            "email": { "type": "string", "format": "email" },
+            "telefon": { "type": "string", "description": "International, z. B. +49 170 1234567." },
+            "mail_betreff": { "$ref": "#/$defs/text" },
+            "mail_text": { "$ref": "#/$defs/text", "description": "Vorausgefüllter Text des Mail-Buttons." }
+          }
+        },
+        "foto": { "$ref": "#/$defs/bild", "description": "Foto der Gastgeber im Brief-Abschnitt." }
+      }
+    },
+    "objekt": {
+      "type": "object",
+      "required": ["name", "ort", "land", "anbieter"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "description": "Projektname, z. B. ‚Mövenpick Residences Kvarner Bay'." },
+        "ort": { "type": "string" },
+        "region": { "type": "string" },
+        "land": { "type": "string" },
+        "anbieter": { "type": "string", "description": "Entwickler/Verkäufer, erscheint im Disclaimer." },
+        "betreiber_marke": { "type": "string", "description": "Hotelmarke/Betreiber, falls abweichend." },
+        "material_genehmigt": { "type": "boolean", "description": "Darf Material der Projekt-Webseite verwendet werden?" },
+        "praemie_offenlegen": { "type": "boolean", "default": true, "description": "Wird eine Vermittlungsprämie offen genannt (ohne Betrag)?" },
+        "kurzbeschreibung": { "$ref": "#/$defs/text" },
+        "kennzahlen": { "type": "array", "items": { "type": "object", "required": ["wert", "label"], "properties": { "wert": { "type": "string" }, "label": { "$ref": "#/$defs/text" } } } }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "required": ["titel", "untertitel", "bild"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "$ref": "#/$defs/text" },
+        "titel": { "$ref": "#/$defs/text" },
+        "untertitel": { "$ref": "#/$defs/text" },
+        "bild": { "$ref": "#/$defs/bild" },
+        "button_kontakt": { "$ref": "#/$defs/text" },
+        "button_warum": { "$ref": "#/$defs/text" }
+      }
+    },
+    "brief": {
+      "type": "object",
+      "required": ["anrede", "absaetze"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "$ref": "#/$defs/text" },
+        "anrede": { "$ref": "#/$defs/text", "description": "z. B. ‚Liebe Freunde,'" },
+        "absaetze": { "type": "array", "minItems": 1, "maxItems": 6, "items": { "$ref": "#/$defs/text" } },
+        "unterschrift": { "type": "string" }
+      }
+    },
+    "gruende": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 8,
+      "description": "Karten ‚Was wir besonders schätzen'.",
+      "items": {
+        "type": "object",
+        "required": ["titel", "text"],
+        "additionalProperties": false,
+        "properties": {
+          "titel": { "$ref": "#/$defs/text" },
+          "text": { "$ref": "#/$defs/text" },
+          "hervorgehoben": { "type": "boolean", "default": false, "description": "Karte über volle Breite (z. B. ‚Eigentum ohne Kümmern')." }
+        }
+      }
+    },
+    "eigenes_objekt": {
+      "type": "object",
+      "description": "Abschnitt ‚Unsere Wahl'. Weglassen, wenn nicht gewünscht.",
+      "required": ["einleitung", "merkmale"],
+      "additionalProperties": false,
+      "properties": {
+        "titel": { "$ref": "#/$defs/text" },
+        "einleitung": { "$ref": "#/$defs/text" },
+        "merkmale": { "type": "array", "minItems": 1, "maxItems": 6, "items": { "type": "object", "required": ["titel", "text"], "properties": { "titel": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } } } },
+        "bild": { "$ref": "#/$defs/bild" },
+        "modell": { "$ref": "#/$defs/bild", "description": "Modell oder Lageplan der Anlage mit Bildunterschrift." },
+        "hinweis": { "$ref": "#/$defs/text", "description": "Hervorgehobener Zusatz, z. B. zu anderen Lagen." }
+      }
+    },
+    "umgebung": {
+      "type": "array",
+      "description": "Ausflüge und Orte in der Nähe.",
+      "items": {
+        "type": "object",
+        "required": ["titel", "text"],
+        "additionalProperties": false,
+        "properties": {
+          "titel": { "$ref": "#/$defs/text" },
+          "text": { "$ref": "#/$defs/text" },
+          "bilder": { "type": "array", "maxItems": 3, "items": { "$ref": "#/$defs/bild" } },
+          "links": { "type": "array", "items": { "$ref": "#/$defs/link" } },
+          "layout": { "type": "string", "enum": ["drei-bilder", "zwei-bilder", "ein-bild", "nur-text"] }
+        }
+      }
+    },
+    "fotos": {
+      "type": "object",
+      "description": "Eigene Fotos ‚So sieht es dort wirklich aus'.",
+      "required": ["bilder"],
+      "additionalProperties": false,
+      "properties": {
+        "einleitung": { "$ref": "#/$defs/text" },
+        "bilder": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["datei", "titel"],
+            "additionalProperties": false,
+            "properties": {
+              "datei": { "type": "string" },
+              "titel": { "$ref": "#/$defs/text" },
+              "text": { "$ref": "#/$defs/text" },
+              "groesse": { "type": "string", "enum": ["breit", "schmal", "drittel"], "description": "Kachelgröße im Raster (7/12, 5/12, 4/12)." },
+              "bildausschnitt": { "type": "string", "description": "CSS object-position, z. B. ‚50% 30%'." }
+            }
+          }
+        }
+      }
+    },
+    "projektstand": {
+      "type": "object",
+      "description": "Zeitleiste bei Bauprojekten. Weglassen, wenn fertig.",
+      "required": ["zeitleiste"],
+      "additionalProperties": false,
+      "properties": {
+        "einleitung": { "$ref": "#/$defs/text" },
+        "zeitleiste": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "items": {
+            "type": "object",
+            "required": ["wann", "titel", "text", "status"],
+            "properties": {
+              "wann": { "$ref": "#/$defs/text" },
+              "titel": { "$ref": "#/$defs/text" },
+              "text": { "$ref": "#/$defs/text" },
+              "status": { "type": "string", "enum": ["fertig", "bald", "offen"] }
+            }
+          }
+        },
+        "fazit": { "$ref": "#/$defs/text" }
+      }
+    },
+    "ueberblick": {
+      "type": "object",
+      "description": "Objekt im Überblick: Anbieter-Visualisierungen und Ausstattung.",
+      "additionalProperties": false,
+      "properties": {
+        "text": { "$ref": "#/$defs/text" },
+        "galerie": { "type": "array", "items": { "$ref": "#/$defs/bild" } },
+        "galerie_hinweis": { "$ref": "#/$defs/text", "description": "z. B. ‚Visualisierungen des Entwicklers, mit Genehmigung'." },
+        "ausstattung": { "type": "array", "items": { "$ref": "#/$defs/text" } }
+      }
+    },
+    "nutzung": {
+      "type": "object",
+      "description": "Eigennutzung und Vermietungsprogramm.",
+      "additionalProperties": false,
+      "properties": {
+        "titel": { "$ref": "#/$defs/text" },
+        "einleitung": { "$ref": "#/$defs/text" },
+        "saisons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "nutzung", "zeitraeume"],
+            "properties": {
+              "name": { "$ref": "#/$defs/text" },
+              "nutzung": { "$ref": "#/$defs/text", "description": "z. B. ‚14 Tage' oder ‚Unbegrenzt'." },
+              "zeitraeume": { "type": "array", "items": { "$ref": "#/$defs/text" } }
+            }
+          }
+        },
+        "fazit": { "$ref": "#/$defs/text" },
+        "paket": { "type": "object", "properties": { "titel": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } } },
+        "hinweis": { "$ref": "#/$defs/text", "description": "Pflichtsatz: Einnahmen nicht garantiert." }
+      }
+    },
+    "anreise": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wege": { "type": "array", "items": { "type": "object", "required": ["dauer", "text"], "properties": { "dauer": { "$ref": "#/$defs/text" }, "text": { "$ref": "#/$defs/text" } } } },
+        "hinweis": { "$ref": "#/$defs/text" },
+        "links": { "type": "array", "items": { "$ref": "#/$defs/link" } },
+        "region": {
+          "type": "object",
+          "description": "Kasten ‚Was sich in der Region tut' – Pläne mit Quellen.",
+          "properties": {
+            "titel": { "$ref": "#/$defs/text" },
+            "absaetze": { "type": "array", "items": { "$ref": "#/$defs/text" } },
+            "links": { "type": "array", "items": { "$ref": "#/$defs/link" } }
+          }
+        }
+      }
+    },
+    "offen": {
+      "type": "object",
+      "description": "‚Ganz offen gesagt': Prämie und Motiv.",
+      "required": ["zitat"],
+      "properties": {
+        "zitat": { "$ref": "#/$defs/text" },
+        "text": { "$ref": "#/$defs/text" }
+      }
+    },
+    "kontakt": {
+      "type": "object",
+      "required": ["schritte"],
+      "additionalProperties": false,
+      "properties": {
+        "titel": { "$ref": "#/$defs/text" },
+        "text": { "$ref": "#/$defs/text" },
+        "schritte": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "$ref": "#/$defs/text" } },
+        "bild": { "$ref": "#/$defs/bild" },
+        "formular": { "type": "boolean", "default": false, "description": "true = Kontaktformular statt Mail-Button (Anbindung an Kontaktverwaltung, Issue #2)." }
+      }
+    },
+    "fuss": {
+      "type": "object",
+      "required": ["disclaimer"],
+      "additionalProperties": false,
+      "properties": {
+        "disclaimer": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/text" } },
+        "bildnachweis": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["bild", "urheber", "lizenz"],
+            "properties": {
+              "bild": { "type": "string" },
+              "urheber": { "type": "string" },
+              "lizenz": { "type": "string" },
+              "lizenz_url": { "type": "string", "format": "uri" },
+              "quelle": { "type": "string", "format": "uri" }
+            }
+          }
+        }
+      }
+    },
+    "vereinbarung": {
+      "type": "object",
+      "description": "Konditionen für Seiten Dritter (Issue #5). Entfällt bei eigenen Seiten.",
+      "required": ["version", "akzeptiert_am", "akzeptiert_von"],
+      "additionalProperties": false,
+      "properties": {
+        "version": { "type": "string", "description": "Version des Konditionen-Textes, z. B. ‚2026-10'." },
+        "erstellung_netto_eur": { "type": "number" },
+        "erfolgspraemie_eur": { "type": "number" },
+        "laufzeit_monate": { "type": "integer" },
+        "akzeptiert_am": { "type": "string", "format": "date-time" },
+        "akzeptiert_von": { "type": "string", "description": "Name der Person, die die Konditionen bestätigt hat." },
+        "rechnung_gestellt_am": { "type": "string", "format": "date" }
+      }
+    }
+  },
+  "$defs": {
+    "sprachcode": { "type": "string", "enum": ["de", "en", "hr", "sl", "hu"] },
+    "text": {
+      "type": "object",
+      "description": "Mehrsprachiger Text: Schlüssel = Sprachcode. Die Standardsprache ist Pflicht, weitere Sprachen optional (fehlende fallen auf die Standardsprache zurück).",
+      "minProperties": 1,
+      "propertyNames": { "enum": ["de", "en", "hr", "sl", "hu"] },
+      "additionalProperties": { "type": "string" }
+    },
+    "bild": {
+      "type": "object",
+      "required": ["datei"],
+      "additionalProperties": false,
+      "properties": {
+        "datei": { "type": "string", "description": "Pfad relativ zur Seite, z. B. bilder/privat/wir.jpg." },
+        "bildunterschrift": { "$ref": "#/$defs/text" },
+        "alt": { "$ref": "#/$defs/text" },
+        "quelle": { "type": "string", "enum": ["eigen", "anbieter", "commons"], "description": "Herkunft – steuert Kennzeichnung und Bildnachweis." },
+        "bildausschnitt": { "type": "string", "description": "CSS object-position." }
+      }
+    },
+    "link": {
+      "type": "object",
+      "required": ["label", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "label": { "$ref": "#/$defs/text", "description": "Button-Beschriftung (keine nackte URL)." },
+        "url": { "type": "string", "format": "uri" },
+        "art": { "type": "string", "enum": ["offiziell", "quelle", "bericht"], "description": "offiziell = Tourismus/Nationalpark, quelle = Beleg für eine Aussage, bericht = Reisebericht." }
+      }
+    }
+  }
+}
