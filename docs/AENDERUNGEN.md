@@ -1,6 +1,8 @@
 # Änderungsprotokoll
 
 ## 2026-10-05
+- `pipeline/seatable-base-anlegen.py`: legt die Tabellen der SeaTable-Base „Empfehlungsseiten“ an (Seiten, Interessenten, Ereignisse, Vermittlungen, Vereinbarungen, Verknüpfungen). Phase 1 aus dem Selbstbedienungs-Konzept.
+- Domain referral-novi.eu bestellt (All-Inkl Inklusivdomain), DNS auf GitHub Pages; Organisation `referral-novi` mit Repo `referral-novi.github.io` und Pages angelegt.
 - Konzept Selbstbedienungs-Formular und Veröffentlichung (Issue #3, Punkte 3–6) in `docs/konzept-selbstbedienung.md`.
 - Generator `generator/erzeuge-seite.py` (Issue #3, Punkt 2): erzeugt aus einer seite.json die index.html, beliebige der fünf Sprachen, Laufzeit-Logik (#4); gegen das Novi-Beispiel getestet.
 - Datenmodell für Empfehlungsseiten (Issue #3, Punkt 1): `docs/datenmodell.md`, JSON Schema und Novi-Beispiel unter `docs/schema/`.
