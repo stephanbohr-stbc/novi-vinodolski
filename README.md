@@ -21,6 +21,8 @@ bilder/             Visualisierungen des Entwicklers (mit Genehmigung des Vertri
 bilder/privat/      eigene Fotos
 bilder/umgebung/    frei lizenzierte Fotos von Wikimedia Commons (Bildnachweis im Seitenfuß)
 deploy.sh           veröffentlicht den aktuellen Stand aus der Quelle (Google Drive)
+generator/          erzeugt aus einer seite.json eine fertige Seite (siehe generator/README.md)
+docs/schema/        Datenmodell (JSON Schema) und Beispiel
 docs/PROZESS.md     wie die Seite entstanden ist und wie sie gepflegt wird
 docs/AENDERUNGEN.md Änderungsprotokoll
 ```
