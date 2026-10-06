@@ -90,6 +90,7 @@ Automatisch gesetzt, nicht abgefragt: Disclaimer (`fuss.disclaimer`, Anbieter ei
 - Webformular **„Eure Empfehlungsseite“** auf der Tabelle Seiten: Felder Besitzer*, E-Mail Besitzer*, Telefon Besitzer, Objekt*, Ort* (Auswahl, Standard „Mövenpick – Novi Vinodolski“, weitere Orte später ergänzbar), Sprachen, Standardsprache, Bilder, Notizen (* = Pflicht). Benachrichtigung an Stephan bei jedem Eingang. Zugriff: jeder mit Link. Begriff „Besitzer“ statt „Gastgeber“ (Stephans Vorgabe: „ich empfehle an …“).
   Link: https://cloud.seatable.io/dtable/forms/9937bb6e-8225-489c-92ce-9bb09b1cbc26/
 - Bewusst nicht im Formular: Slug, Status, Zugangscode, Seite JSON, URLs, Freigabefelder – die setzt die Pipeline bzw. Stephan.
+- **Phase 2 (06.10.2026):** `pipeline/seatable-zu-json.py <slug>` liest die Formular-Zeile, lädt die Bilder, setzt Persönliches in die **Ort-Vorlage** `pipeline/vorlagen/moevenpick-novi-vinodolski.json` ein (Resort-Überblick, Nutzung, Anreise, Umgebung, Disclaimer – geteilt von allen Besitzern am Ort), erzeugt die Seite per Generator und schreibt JSON + Status „vorschau“ zurück. Getestet mit dem Eintrag `test-beckenbauer` (3 Sprachen, 1 Foto). Bekannte Lücken: Einzelpersonen werden noch in Wir-Form angesprochen; Formular fragt weder Hero-Titel noch Gründe/Fotounterschriften ab – dafür Standardtexte.
 - Noch offen in Phase 1: Hinweistexte (Konditionen, Datenschutz) im Formular, Übersetzungs-Hinweis.
 
 ## 8. Phasen

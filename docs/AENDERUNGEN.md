@@ -1,6 +1,7 @@
 # Änderungsprotokoll
 
 ## 2026-10-06
+- Pipeline `seatable-zu-json.py` + Ort-Vorlage: aus einer Formular-Zeile entsteht eine fertige Seite (Phase 2).
 - SeaTable-Base „Empfehlungsseiten“ angelegt (5 Tabellen, Novi als erste Zeile); Webformular „Eure Empfehlungsseite“ mit 9 Feldern und Benachrichtigung erstellt.
 
 ## 2026-10-05

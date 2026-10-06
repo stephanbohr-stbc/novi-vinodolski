@@ -1,0 +1,450 @@
+{
+  "ort": "Mövenpick – Novi Vinodolski",
+  "objekt": {
+    "name": "Mövenpick Residences Kvarner Bay",
+    "ort": "Novi Vinodolski",
+    "region": "Kvarner-Bucht",
+    "land": "Kroatien",
+    "anbieter": "NV ADRIA CONDOS d.o.o.",
+    "betreiber_marke": "Mövenpick (Accor)",
+    "material_genehmigt": true,
+    "kurzbeschreibung": {
+      "de": "304 Residenzen in 35 Gebäuden, verteilt auf mehr als 150.000 m² Parklandschaft direkt am Meer. Jede hat einen eigenen Balkon oder eine Terrasse.",
+      "en": "304 residences in 35 buildings, spread across more than 150,000 m² of parkland right by the sea. Each has its own balcony or terrace."
+    }
+  },
+  "hero_bild": {
+    "datei": "bilder/strand-pool.jpg",
+    "quelle": "anbieter"
+  },
+  "kontakt_bild": {
+    "datei": "bilder/skybar.jpg",
+    "quelle": "anbieter"
+  },
+  "gruende_standard": [
+    {
+      "titel": {
+        "de": "Toplage direkt am Meer",
+        "en": "A prime location on the water"
+      },
+      "text": {
+        "de": "Die Residenzen liegen in einem großen Park direkt an der Bucht, die ersten Reihen nur 50 bis 80 Meter vom Meer.",
+        "en": "The residences sit in a large park right on the bay; the first rows are just 50 to 80 metres from the sea."
+      }
+    },
+    {
+      "titel": {
+        "de": "Neuwertig und hochwertig eingerichtet",
+        "en": "Brand new and beautifully furnished"
+      },
+      "text": {
+        "de": "Alles ist komplett saniert. Die Apartments sind vom Interior-Studio Atellior nach Mövenpick-Standard fertig eingerichtet.",
+        "en": "Everything has been completely renovated. The apartments come fully furnished to Mövenpick standard by the interior studio Atellior."
+      }
+    },
+    {
+      "titel": {
+        "de": "Das ganze Hotel gehört dazu",
+        "en": "The whole hotel is yours to use"
+      },
+      "text": {
+        "de": "Als Eigentümer nutzt man die komplette Infrastruktur des Mövenpick-Hotels: Spa mit Meerwasserpools, Fitness, Pools, Restaurants, Bars und Strand.",
+        "en": "As an owner you use the full Mövenpick infrastructure: spa with seawater pools, gym, pools, restaurants, bars and the beach."
+      }
+    },
+    {
+      "titel": {
+        "de": "20 % Rabatt als Eigentümer",
+        "en": "20% off as an owner"
+      },
+      "text": {
+        "de": "Eigentümer bekommen 20 % Nachlass in allen Restaurants und Bars des Resorts und auf Spa-Anwendungen – dazu weltweit den Platinum-Status bei Accor.",
+        "en": "Owners get 20% off in all of the resort's restaurants and bars and on spa treatments – plus Accor Platinum status worldwide."
+      }
+    },
+    {
+      "titel": {
+        "de": "Schnell da",
+        "en": "Quick to reach"
+      },
+      "text": {
+        "de": "Lufthansa fliegt von Frankfurt direkt nach Rijeka, in weniger als anderthalb Stunden; vom Flughafen ist es etwa eine halbe Stunde.",
+        "en": "Lufthansa flies direct from Frankfurt to Rijeka in under an hour and a half; from the airport it is about half an hour."
+      }
+    },
+    {
+      "titel": {
+        "de": "Eigentum ohne Kümmern",
+        "en": "Ownership without the chores"
+      },
+      "text": {
+        "de": "Pflege, Reinigung, Reparaturen und Garten übernimmt das Resort. Wer mag, lässt das Apartment vom Hotel vermieten, wenn er nicht da ist.",
+        "en": "Upkeep, cleaning, repairs and the garden are handled by the resort. If you like, the hotel rents the apartment out while you are away."
+      },
+      "hervorgehoben": true
+    }
+  ],
+  "umgebung": [
+    {
+      "titel": {
+        "de": "Die Plitvicer Seen – hier wurde Winnetou gedreht",
+        "en": "Plitvice Lakes – where Winnetou was filmed"
+      },
+      "text": {
+        "de": "Türkisfarbene Seen, Wasserfälle und Holzstege mitten übers Wasser. Hier wurde „Der Schatz im Silbersee“ gedreht.",
+        "en": "Turquoise lakes, waterfalls and boardwalks right across the water. This is where \"The Treasure of Silver Lake\" was filmed."
+      },
+      "bilder": [],
+      "links": [
+        {
+          "label": {
+            "de": "Nationalpark Plitvicer Seen",
+            "en": "Plitvice Lakes National Park"
+          },
+          "url": "https://np-plitvicka-jezera.hr/de/",
+          "art": "offiziell"
+        },
+        {
+          "label": {
+            "de": "Winnetou-Drehorte: Filmszene und heute",
+            "en": "Winnetou locations: film scene vs. today"
+          },
+          "url": "https://www.otto-photo.de/specials/winnetou/",
+          "art": "bericht"
+        }
+      ],
+      "layout": "nur-text"
+    },
+    {
+      "titel": {
+        "de": "Die Insel Krk, direkt gegenüber",
+        "en": "The island of Krk, right across the bay"
+      },
+      "text": {
+        "de": "Landschaftlich wunderschön: viele Hügel mit tollen Aussichten, superschöne Strände und zwei schöne Altstädtchen. Im Süden liegt Baška mit seinem fast zwei Kilometer langen Strand.",
+        "en": "Beautiful: lots of hills with great views, gorgeous beaches and two lovely little old towns. In the south lies Baška with its almost two-kilometre-long beach."
+      },
+      "bilder": [],
+      "links": [
+        {
+          "label": {
+            "de": "Tourist-Information Insel Krk",
+            "en": "Krk island tourist information"
+          },
+          "url": "https://krk.hr/de/",
+          "art": "offiziell"
+        },
+        {
+          "label": {
+            "de": "Tourist-Information Baška",
+            "en": "Baška tourist information"
+          },
+          "url": "https://www.visitbaska.hr/de",
+          "art": "offiziell"
+        }
+      ],
+      "layout": "nur-text"
+    }
+  ],
+  "projektstand": {
+    "einleitung": {
+      "de": "Damit ihr es richtig einordnet: Noch ist nicht alles fertig. Das Hotel läuft, unsere Wohnung und Teile der Anlage sind noch im Bau.",
+      "en": "To be clear: not everything is finished yet. The hotel is up and running, while our apartment and parts of the resort are still being completed."
+    },
+    "zeitleiste": [
+      {
+        "wann": {
+          "de": "Seit Sommer 2026",
+          "en": "Since summer 2026"
+        },
+        "titel": {
+          "de": "Hotel in Betrieb, beide Pools fertig",
+          "en": "Hotel open, both pools ready"
+        },
+        "text": {
+          "de": "Adults-only-Pool und Familienpool sind fertig – wir haben beide ausprobiert.",
+          "en": "The adults-only pool and the family pool are finished – we have tried both."
+        },
+        "status": "fertig"
+      },
+      {
+        "wann": {
+          "de": "Dezember 2026",
+          "en": "December 2026"
+        },
+        "titel": {
+          "de": "Spa- und Fitnessbereich",
+          "en": "Spa and fitness area"
+        },
+        "text": {
+          "de": "Soll im Dezember 2026 fertig werden.",
+          "en": "Due to be completed in December 2026."
+        },
+        "status": "bald"
+      },
+      {
+        "wann": {
+          "de": "Ziel: 1. Januar 2027",
+          "en": "Target: 1 January 2027"
+        },
+        "titel": {
+          "de": "Unsere Wohnung",
+          "en": "Our apartment"
+        },
+        "text": {
+          "de": "Ziel ist, dass sie zum 1. Januar 2027 fertig wird – zusammen mit weiteren Wohnungen in der ersten Reihe.",
+          "en": "The aim is for it to be ready on 1 January 2027, together with other apartments in the first row."
+        },
+        "status": "bald"
+      },
+      {
+        "wann": {
+          "de": "In ein bis zwei Jahren",
+          "en": "In one to two years"
+        },
+        "titel": {
+          "de": "Die gesamte Anlage",
+          "en": "The whole resort"
+        },
+        "text": {
+          "de": "Voraussichtlich noch ein bis zwei Jahre, bis alles fertig ist.",
+          "en": "Probably another one to two years before everything is complete."
+        },
+        "status": "offen"
+      }
+    ],
+    "fazit": {
+      "de": "Aus unserer Sicht ist genau jetzt noch eine super Gelegenheit, eine top gelegene, komplett renovierte und hochwertig eingerichtete Wohnung zu bekommen.",
+      "en": "As we see it, now is still a great opportunity to get a superbly located, completely renovated and beautifully furnished apartment."
+    }
+  },
+  "ueberblick": {
+    "galerie": [
+      {
+        "datei": "bilder/strandweg.jpg",
+        "quelle": "anbieter",
+        "bildunterschrift": {
+          "de": "Der Weg von den Villen zum Strand",
+          "en": "The path from the villas down to the beach"
+        }
+      },
+      {
+        "datei": "bilder/spa.jpg",
+        "quelle": "anbieter",
+        "bildunterschrift": {
+          "de": "Spa mit Meerwasserpools",
+          "en": "Spa with seawater pools"
+        }
+      }
+    ],
+    "galerie_hinweis": {
+      "de": "Bilder: Visualisierungen des Projektentwicklers, verwendet mit freundlicher Genehmigung des Vertriebs.",
+      "en": "Images: visualisations by the project developer, used with the kind permission of the sales team."
+    },
+    "ausstattung": [
+      {
+        "de": "Kies- und befestigter Strand mit Liegen, Schirmen und Cabanas",
+        "en": "Pebble and paved beach with sunbeds, parasols and cabanas"
+      },
+      {
+        "de": "Zweistöckiger Spa-, Wellness- und Fitnessbereich mit Meerblick",
+        "en": "Two-storey spa, wellness and fitness area with sea view"
+      }
+    ]
+  },
+  "nutzung": {
+    "titel": {
+      "de": "Selbst nutzen, wann ihr wollt – und vermieten lassen, wenn ihr nicht da seid",
+      "en": "Use it yourself whenever you like – and let the hotel rent it out when you are away"
+    },
+    "einleitung": {
+      "de": "Eigentümer können ihre Residenz in das Vermietungsprogramm des Hotels geben. Dann gelten für die eigene Nutzung diese Zeiten:",
+      "en": "Owners can place their residence in the hotel's rental programme. These are then the periods for your own use:"
+    },
+    "saisons": [
+      {
+        "name": {
+          "de": "Hauptsaison",
+          "en": "Peak season"
+        },
+        "nutzung": {
+          "de": "14 Tage",
+          "en": "14 days"
+        },
+        "zeitraeume": [
+          {
+            "de": "1. Juli – 31. August",
+            "en": "1 July – 31 August"
+          },
+          {
+            "de": "20. Dezember – 6. Januar",
+            "en": "20 December – 6 January"
+          }
+        ]
+      },
+      {
+        "name": {
+          "de": "Zwischensaison",
+          "en": "Shoulder season"
+        },
+        "nutzung": {
+          "de": "20 Tage",
+          "en": "20 days"
+        },
+        "zeitraeume": [
+          {
+            "de": "1. Mai – 30. Juni",
+            "en": "1 May – 30 June"
+          },
+          {
+            "de": "1. September – 31. Oktober",
+            "en": "1 September – 31 October"
+          }
+        ]
+      },
+      {
+        "name": {
+          "de": "Nebensaison",
+          "en": "Off-season"
+        },
+        "nutzung": {
+          "de": "Unbegrenzt",
+          "en": "Unlimited"
+        },
+        "zeitraeume": [
+          {
+            "de": "1. November – 19. Dezember",
+            "en": "1 November – 19 December"
+          },
+          {
+            "de": "7. Januar – 30. April",
+            "en": "7 January – 30 April"
+          }
+        ]
+      }
+    ],
+    "fazit": {
+      "de": "Also rund fünf Wochen in der Saison für euch selbst – und von November bis April, sooft ihr mögt.",
+      "en": "So around five weeks in season for yourselves – and from November to April as often as you like."
+    },
+    "hinweis": {
+      "de": "Die Teilnahme am Vermietungsprogramm ist freiwillig. Mieteinnahmen hängen von Auslastung und Preisen ab und sind nicht garantiert.",
+      "en": "Joining the rental programme is optional. Rental income depends on occupancy and rates and is not guaranteed."
+    }
+  },
+  "anreise": {
+    "wege": [
+      {
+        "dauer": {
+          "de": "ca. 1 Std. 20",
+          "en": "approx. 1 h 20"
+        },
+        "text": {
+          "de": "Direktflug mit Lufthansa von Frankfurt nach Rijeka",
+          "en": "direct Lufthansa flight from Frankfurt to Rijeka"
+        }
+      },
+      {
+        "dauer": {
+          "de": "ca. 30 Min.",
+          "en": "approx. 30 min"
+        },
+        "text": {
+          "de": "vom Flughafen Rijeka bis zum Resort",
+          "en": "from Rijeka airport to the resort"
+        }
+      }
+    ],
+    "hinweis": {
+      "de": "Der Direktflug geht nicht täglich – bitte den aktuellen Flugplan ansehen.",
+      "en": "The direct flight does not run every day – please check the current timetable."
+    },
+    "links": [
+      {
+        "label": {
+          "de": "Lufthansa: Frankfurt – Rijeka",
+          "en": "Lufthansa: Frankfurt – Rijeka"
+        },
+        "url": "https://www.lufthansa.com/lhg/de/de/o-d/cy-cy/frankfurt-rijeka",
+        "art": "offiziell"
+      }
+    ],
+    "region": {
+      "titel": {
+        "de": "Was sich in der Region tut",
+        "en": "What is happening in the region"
+      },
+      "absaetze": [
+        {
+          "de": "Die Küstenautobahn A7 wird Stück für Stück verlängert. Die Umfahrung von Novi Vinodolski ist im Bau und soll im Frühjahr 2027 fertig sein.",
+          "en": "The coastal motorway A7 is being extended step by step. The Novi Vinodolski bypass is under construction and due to be finished in spring 2027."
+        },
+        {
+          "de": "Das sind Bauprojekte und Pläne, Termine können sich verschieben.",
+          "en": "These are construction projects and plans, and dates can slip."
+        }
+      ],
+      "links": [
+        {
+          "label": {
+            "de": "Quelle: Umfahrung Novi Vinodolski",
+            "en": "Source: Novi Vinodolski bypass"
+          },
+          "url": "https://www.index.hr/vijesti/clanak/obilaznica-novog-vinodolskog-bit-ce-gotova-do-proljeca-2027/2732321.aspx",
+          "art": "quelle"
+        }
+      ]
+    }
+  },
+  "offen_standard": {
+    "zitat": {
+      "de": "Wenn sich jemand von euch über uns für ein Apartment entscheidet, bekommen wir vom Vertrieb eine Vermittlungsprämie. Das sollt ihr wissen.",
+      "en": "If one of you decides on an apartment through us, we receive a referral bonus from the sales team. You should know that."
+    },
+    "text": {
+      "de": "Der eigentliche Grund für diese Seite ist aber ein anderer: Wir wollen oft hier sein, und mit Freunden vor Ort ist es einfach schöner.",
+      "en": "The real reason for this page is a different one, though: we plan to be here often, and it is simply nicer with friends nearby."
+    }
+  },
+  "kontakt_schritte": [
+    {
+      "de": "Ihr schreibt uns eine kurze Mail – ein Satz genügt.",
+      "en": "You write to us – a single line is enough."
+    },
+    {
+      "de": "Wir schicken euch die Unterlagen: Grundrisse, Lageplan und alle Details.",
+      "en": "We send you the documents: floor plans, site map and all the details."
+    },
+    {
+      "de": "Wir sprechen miteinander – über das, was euch interessiert, und über unsere Erfahrungen.",
+      "en": "We talk – about whatever interests you, and about our own experience."
+    }
+  ],
+  "fuss_disclaimer": [
+    {
+      "de": "Dies ist eine private Seite von Manu und Stephan für Freunde und Bekannte. Sie ist kein Angebot und keine Anlageberatung. Verbindlich sind allein die Unterlagen und Verträge des Entwicklers NV ADRIA CONDOS d.o.o. Immobilieninvestitionen sind mit Risiken verbunden; Wertentwicklung und Mieterträge sind nicht garantiert.",
+      "en": "This is a private page by Manu and Stephan for friends and acquaintances. It is neither an offer nor investment advice. Only the documents and contracts of the developer, NV ADRIA CONDOS d.o.o., are binding. Property investments involve risks; value growth and rental income are not guaranteed."
+    },
+    {
+      "de": "Das Projekt Mövenpick Hotel & Residences Kvarner Bay befindet sich nicht im Eigentum von Accor und wird nicht von Accor entwickelt oder verkauft. Der Entwickler nutzt die Marken auf Grundlage einer Lizenz.",
+      "en": "The Mövenpick Hotel & Residences Kvarner Bay project is not owned, developed or sold by Accor. The developer uses the brands under a licence."
+    }
+  ],
+  "bildnachweis": [
+    {
+      "bild": "bilder/umgebung/motovun.jpg",
+      "urheber": "Jernej Furman",
+      "lizenz": "CC BY 2.0",
+      "lizenz_url": "https://creativecommons.org/licenses/by/2.0/",
+      "quelle": "https://commons.wikimedia.org/"
+    },
+    {
+      "bild": "bilder/umgebung/trueffel-pasta.jpg",
+      "urheber": "heatheronhertravels",
+      "lizenz": "CC BY 2.0",
+      "lizenz_url": "https://creativecommons.org/licenses/by/2.0/",
+      "quelle": "https://commons.wikimedia.org/"
+    }
+  ],
+  "bilder_quelle": "https://github.com/stephanbohr-stbc/novi-vinodolski/tree/main/bilder"
+}
