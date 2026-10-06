@@ -84,6 +84,14 @@ Automatisch gesetzt, nicht abgefragt: Disclaimer (`fuss.disclaimer`, Anbieter ei
 - Datenschutzhinweis im Formular und auf jeder erzeugten Seite (Fußzeile, automatisch).
 - Verarbeitung durch Stephan für Gastgeber = Auftragsverarbeitung → AV-Vertrag als Teil der Konditionen (#5).
 
+## 7a. Stand der Umsetzung (06.10.2026)
+
+- SeaTable-Base **Empfehlungsseiten** angelegt (Konto stephan.bohr@bohr-advise.de, Workspace 104380), Struktur per `pipeline/seatable-base-anlegen.py`.
+- Webformular **„Eure Empfehlungsseite“** auf der Tabelle Seiten: Felder Gastgeber, E-Mail Gastgeber, Telefon Gastgeber, Objekt, Ort, Sprachen, Standardsprache, Bilder, Notizen. Benachrichtigung an Stephan bei jedem Eingang. Zugriff: jeder mit Link.
+  Link: https://cloud.seatable.io/dtable/forms/9937bb6e-8225-489c-92ce-9bb09b1cbc26/
+- Bewusst nicht im Formular: Slug, Status, Zugangscode, Seite JSON, URLs, Freigabefelder – die setzt die Pipeline bzw. Stephan.
+- Noch offen in Phase 1: Pflichtfelder markieren, Hinweistexte (Konditionen, Datenschutz) im Formular, Übersetzungs-Hinweis.
+
 ## 8. Phasen
 
 | Phase | Inhalt | Ergebnis |

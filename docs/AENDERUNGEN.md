@@ -1,5 +1,8 @@
 # Änderungsprotokoll
 
+## 2026-10-06
+- SeaTable-Base „Empfehlungsseiten“ angelegt (5 Tabellen, Novi als erste Zeile); Webformular „Eure Empfehlungsseite“ mit 9 Feldern und Benachrichtigung erstellt.
+
 ## 2026-10-05
 - `pipeline/seatable-base-anlegen.py`: legt die Tabellen der SeaTable-Base „Empfehlungsseiten“ an (Seiten, Interessenten, Ereignisse, Vermittlungen, Vereinbarungen, Verknüpfungen). Phase 1 aus dem Selbstbedienungs-Konzept.
 - Domain referral-novi.eu bestellt (All-Inkl Inklusivdomain), DNS auf GitHub Pages; Organisation `referral-novi` mit Repo `referral-novi.github.io` und Pages angelegt.
