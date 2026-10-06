@@ -1,5 +1,7 @@
 # Änderungsprotokoll
 
+> **Projekt pausiert am 06.10.2026.** Die Novi-Seite bleibt online und wird bei Bedarf gepflegt (`deploy.sh`). Die Plattform-Idee (Issues #1–#5: Selbstbedienung, Kontaktverwaltung, Laufzeit, Konditionen) ruht; Grund: Aufwand zu hoch im Verhältnis zum erwarteten Nutzen – der Erfolg hinge davon ab, ob der Vertrieb das Modell aufgreift. Wiedereinstieg: `docs/konzept-selbstbedienung.md` Abschnitt 7a (Stand) und Phase 3 ff.
+
 ## 2026-10-06
 - Pipeline `seatable-zu-json.py` + Ort-Vorlage: aus einer Formular-Zeile entsteht eine fertige Seite (Phase 2).
 - SeaTable-Base „Empfehlungsseiten“ angelegt (5 Tabellen, Novi als erste Zeile); Webformular „Eure Empfehlungsseite“ mit 9 Feldern und Benachrichtigung erstellt.

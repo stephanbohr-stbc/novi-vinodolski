@@ -41,4 +41,7 @@ Wünsche und Ideen werden als [Issues](https://github.com/stephanbohr-stbc/novi-
 
 ## Nachnutzung
 
+**Stand 06.10.2026:** Die Weiterentwicklung zur Plattform (Formular, Pipeline, eigene Domain referral-novi.eu) ist bis Phase 2 gebaut und dann **pausiert**; Details in `docs/konzept-selbstbedienung.md` und den Issues.
+
+
 Der Aufbau eignet sich als Vorlage für ähnliche Empfehlungsseiten anderer Eigentümer. Der Prozess ist in `docs/PROZESS.md` beschrieben.
