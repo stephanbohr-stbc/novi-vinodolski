@@ -22,7 +22,7 @@ TOKEN = os.environ.get("SEATABLE_TOKEN")
 # Spalten: (Name, Typ, column_data oder None)
 def auswahl(*optionen):
     farben = ["#9860E5", "#59CB74", "#FFC94E", "#F27B59", "#5BB4FD", "#FF8000", "#ADDF84", "#E1D7E3"]
-    return {"options": [{"name": o, "color": farben[i % len(farben)], "textColor": "#FFFFFF"} for i, o in enumerate(optionen)]}
+    return {"options": [{"id": f"{i+1:06d}", "name": o, "color": farben[i % len(farben)], "textColor": "#FFFFFF"} for i, o in enumerate(optionen)]}
 
 TABELLEN = {
     "Seiten": [
