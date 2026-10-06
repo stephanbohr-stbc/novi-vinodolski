@@ -87,10 +87,10 @@ Automatisch gesetzt, nicht abgefragt: Disclaimer (`fuss.disclaimer`, Anbieter ei
 ## 7a. Stand der Umsetzung (06.10.2026)
 
 - SeaTable-Base **Empfehlungsseiten** angelegt (Konto stephan.bohr@bohr-advise.de, Workspace 104380), Struktur per `pipeline/seatable-base-anlegen.py`.
-- Webformular **„Eure Empfehlungsseite“** auf der Tabelle Seiten: Felder Gastgeber, E-Mail Gastgeber, Telefon Gastgeber, Objekt, Ort, Sprachen, Standardsprache, Bilder, Notizen. Benachrichtigung an Stephan bei jedem Eingang. Zugriff: jeder mit Link.
+- Webformular **„Eure Empfehlungsseite“** auf der Tabelle Seiten: Felder Besitzer*, E-Mail Besitzer*, Telefon Besitzer, Objekt*, Ort* (Auswahl, Standard „Mövenpick – Novi Vinodolski“, weitere Orte später ergänzbar), Sprachen, Standardsprache, Bilder, Notizen (* = Pflicht). Benachrichtigung an Stephan bei jedem Eingang. Zugriff: jeder mit Link. Begriff „Besitzer“ statt „Gastgeber“ (Stephans Vorgabe: „ich empfehle an …“).
   Link: https://cloud.seatable.io/dtable/forms/9937bb6e-8225-489c-92ce-9bb09b1cbc26/
 - Bewusst nicht im Formular: Slug, Status, Zugangscode, Seite JSON, URLs, Freigabefelder – die setzt die Pipeline bzw. Stephan.
-- Noch offen in Phase 1: Pflichtfelder markieren, Hinweistexte (Konditionen, Datenschutz) im Formular, Übersetzungs-Hinweis.
+- Noch offen in Phase 1: Hinweistexte (Konditionen, Datenschutz) im Formular, Übersetzungs-Hinweis.
 
 ## 8. Phasen
 

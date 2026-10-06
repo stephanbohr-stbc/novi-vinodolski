@@ -27,11 +27,11 @@ def auswahl(*optionen):
 TABELLEN = {
     "Seiten": [
         ("Slug", "text", None),  # erste Spalte = Name-Spalte
-        ("Gastgeber", "text", None),
-        ("E-Mail Gastgeber", "email", None),
-        ("Telefon Gastgeber", "text", None),
+        ("Besitzer", "text", None),
+        ("E-Mail Besitzer", "email", None),
+        ("Telefon Besitzer", "text", None),
         ("Objekt", "text", None),
-        ("Ort", "text", None),
+        ("Ort", "single-select", auswahl("Mövenpick – Novi Vinodolski")),
         ("Status", "single-select", auswahl("entwurf", "vorschau", "freigegeben", "veroeffentlicht", "abgelaufen", "abgeschaltet")),
         ("Sprachen", "multiple-select", auswahl("de", "en", "hr", "sl", "hu")),
         ("Standardsprache", "single-select", auswahl("de", "en", "hr", "sl", "hu")),
